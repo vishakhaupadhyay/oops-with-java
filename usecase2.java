@@ -3,7 +3,7 @@ public class usecase2 {
     public static void main(String[] args) {
         Shape[] shapes = new Shape[2];
         shapes[0] = new Circle(5.0);
-        shapes[1] = new rectangle(4.0, 6.0);
+        shapes[1] = new Rectangle(4.0, 6.0);
  
         for (Shape s : shapes) {
             s.displayArea();   // must print correct area for each shape
@@ -24,10 +24,10 @@ class Circle extends Shape {
     double area() 
     { return Math.PI * radius * radius; }
  }
- class rectangle extends Shape {
+ class Rectangle extends Shape {
     double length;
     double width;
-    rectangle(double l,double w){
+    Rectangle(double l,double w){
         this.length=l;
         this.width=w;
 
