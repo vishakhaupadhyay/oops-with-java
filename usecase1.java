@@ -43,7 +43,7 @@ public class usecase1
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(String author) {  
         this.author = author;
     }
 

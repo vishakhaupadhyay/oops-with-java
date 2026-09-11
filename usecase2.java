@@ -1,0 +1,42 @@
+
+public class usecase2 {
+    public static void main(String[] args) {
+        Shape[] shapes = new Shape[2];
+        shapes[0] = new Circle(5.0);
+        shapes[1] = new rectangle(4.0, 6.0);
+ 
+        for (Shape s : shapes) {
+            s.displayArea();   // must print correct area for each shape
+        }
+    }
+}
+abstract class Shape{
+    abstract double area();
+    void displayArea(){
+        System.out.println("Area = " + area()); 
+    }
+}
+class Circle extends Shape {
+     double radius; 
+     Circle(double radius) { 
+        this.radius = radius; 
+    } 
+    double area() 
+    { return Math.PI * radius * radius; }
+ }
+ class rectangle extends Shape {
+    double length;
+    double width;
+    rectangle(double l,double w){
+        this.length=l;
+        this.width=w;
+
+    }
+    double area(){
+        return length * width;
+    }
+
+    
+    
+
+ }
